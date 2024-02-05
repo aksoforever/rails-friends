@@ -26,3 +26,8 @@ rails db:migrate
 # GitHub
 git branch
 git init -b master
+git add .
+git commit -m "ignore file, change reade.md"
+git remote add origin REMOTE-URL
+git remote -v
+git push origin master
