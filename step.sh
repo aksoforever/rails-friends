@@ -24,3 +24,5 @@ rails db:migrate
 
 
 # GitHub
+git branch
+git init -b master
