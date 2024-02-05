@@ -1,0 +1,22 @@
+
+
+<% if user_signed_in? %>
+  <h1>Friends</h1>
+    <div id="friends">
+      <% @friends.each do |friend| %>
+
+
+          <%= render friend %>
+          <p>
+            <%= link_to "Show more this friend", friend %>
+          </p>
+      <% end %>
+    </div>
+
+    <%= link_to "New friend", new_friend_path %>
+
+<% else %>
+  <h1>Home#index</h1>
+  <p>Find me in app/views/home/index.html.erb</p>
+
+<% end %>

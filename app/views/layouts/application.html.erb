@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Friends App</title>
+    <%= stylesheet_link_tag 'bootstrap.min', crossorigin: 'anonymous' %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <%= render 'home/header' %>
+    <div class="container mt-4">
+      <% if notice %>
+        <%= render 'layouts/alerts' %>
+      <% end %>
+      <% if alert %>
+        <%= alert %>
+      <% end %>
+      
+      <%= yield %>
+    </div>
+
+
+    <%= javascript_include_tag 'bootstrap.bundle.min',  crossorigin: 'anonymous' %>
+  </body>
+</html>
+
+
+
